@@ -1,0 +1,807 @@
+
+entity  AmolTransactions
+{
+
+  recordId UUID  unique ,
+  externalTxnId String unique,
+  customerReference String unique,
+  debitAccountNumber String required,
+  creditAccountNumber String required,
+  debitAmount Integer required,
+  creditAmount Integer,
+  transactionAmount Integer,
+  debitDate ZonedDateTime ,
+  creditDate ZonedDateTime ,
+  status TranStatus ,
+  settlementDate ZonedDateTime ,
+  debitCurrency String required,
+  timestamp ZonedDateTime required,
+  phoneNumber String required,
+  email String required,
+  payerName String,
+  payerAddress String,
+  payerEmail String,
+  payerPhoneNumber String,
+  payerNarration String,
+  payerBranchId String,
+  beneficiaryName String,
+  beneficiaryAccount String,
+  beneficiaryBranchId String,
+  beneficiaryphoneNumber String,
+  tranStatus TranStatus ,
+  narration1 String,
+  narration2 String,
+  narration3 String,
+  taxAmount Integer,
+  taxGLAccount String,
+  taxNarration String,
+  internalErrorCode String,
+  externalErrorCode String,
+  payeeBranchId String,
+  payeeProductInstanceReference String,
+  payeeProductCode String,
+  payeeProductName String,
+  payeeProductDescription String,
+  payeeProductUnitOfMeasure String,
+  payeeProductQuantity String,
+  subCategoryCode String,
+  payerBranchId String,
+  payerBankCode String,
+  payerBankName String,
+  payerBankAddress String,
+  payerBankCity String,
+  payerBankState String,
+  payerBankCountry String,
+  payerBankPostalCode String,
+  checkerId String,
+  remittanceInformation String,
+  paymentChannelCode Channel,
+  feeAmount Integer,
+  feeGLAccount String,
+  feeNarration String,
+  tranFreeField1 String,
+  tranFreeField2 String,
+  tranFreeField3 String,
+  tranFreeField4 String,
+  tranFreeField5 String,
+  tranFreeField6 String,
+  tranFreeField7 String,
+  responseCode String,
+  responseMessage String,
+  responseDetails TextBlob,
+  transferId String,
+  transferReferenceId String,
+  transferStatus String,
+  responseDateTime ZonedDateTime,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+
+}
+
+
+entity CustomerAccount {
+ recordId Integer unique,
+  requestId Integer ,
+  accountName String required,
+  returnCode String required,
+  returnMessage String required,
+  externalTXNid String required,
+  transactionDate ZonedDateTime required,
+  customerId String required,
+  customerProduct String required,
+  customerType String required,
+  accountCategory String required,
+  accountType String required,
+  accountNumber String required,
+  phoneNumber String required,
+  channel String required,
+  franFreeField1 String,
+  franFreeField2 String,
+  franFreeField3 String,
+  franFreeField4 String,
+  franFreeField5 String,
+  franFreeField6 String,
+  franFreeField7 String,
+  franFreeField8 String,
+  franFreeField9 String,
+  franFreeField10 String,
+  franFreeField11 String,
+  franFreeField12 String,
+  franFreeField13 String,
+  franFreeField14 String,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+
+entity Transfer
+{
+  recordId UUID  unique ,
+  transferId String unique,
+  TransferType  TransferType  required,
+  accountNumber String required,
+  amount Integer required,
+  tranDate ZonedDateTime ,
+  status TranStatus ,
+  Currency String required,
+  timestamp ZonedDateTime ,
+  beneficiaryAccount String,
+  phoneNumber String,
+  TranStatus TranStatus ,
+  TranStatusDetails  String ,
+  retries Integer,
+  timestamp ZonedDateTime required,
+  postedBy String,
+  postedDate String,
+  tranFreeField1 String,
+  tranFreeField2 String,
+  tranFreeField3 String,
+
+}
+
+
+entity Transaction
+{
+  recordId UUID  unique ,  transferId String ,
+  productCode String required,
+  billerId String required,
+  paymentChannelCode Channel required,
+  accountNumber String required,
+  amount Integer required,
+  tranDate ZonedDateTime ,
+  status TranStatus ,
+  Currency String required,
+  timestamp ZonedDateTime ,
+  creditAccount String,
+  debitAccount String,
+  phoneNumber String,
+  customerNumber String,
+  TranStatus TranStatus ,
+  TranStatusDetails  String ,
+  retries Integer,
+  timestamp ZonedDateTime,
+  postedBy String,
+  postedDate String,
+  internalErrorCode String,
+  externalErrorCode String,
+  franFreeField1 String,
+  franFreeField2 String,
+  franFreeField3 String,
+  franFreeField4 String,
+  franFreeField5 String,
+  franFreeField6 String,
+  franFreeField7 String,
+  franFreeField8 String,
+  franFreeField9 String,
+  franFreeField10 String,
+  franFreeField11 String,
+  franFreeField12 String,
+  timestamp ZonedDateTime,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+
+
+entity TransactionDetails {
+  recordId UUID  unique ,  transferId String ,
+  productCode String required,
+  paymentChannelCode Channel required,
+  debitAccountNumber String required ,
+  creditAccountNumber String required,
+  debitAmount Integer required,
+  creditAmount Integer,
+  transactionAmount Integer
+  debitDate ZonedDateTime required,
+  creditDate ZonedDateTime required,
+  status TranStatus ,
+  settlementDate ZonedDateTime ,
+  debitCurrency String required,
+  timestamp ZonedDateTime required,
+  phoneNumber String required,
+  email String required,
+  payerName String,
+  payerAddress String,
+  payerEmail String,
+  payerPhoneNumber String,
+  payerNarration String,
+  payerBranchId String,
+  beneficiaryName String,
+  beneficiaryAccount String,
+  beneficiaryBranchId String,
+  beneficiaryphoneNumber String,
+  tranStatus TranStatus ,
+  narration1 String,
+  narration2 String,
+  narration3 String,
+  modeOfPayment ModeOfPayment
+  retries Integer,
+  posted Boolean,
+  apiId String,
+  apiVersion String,
+  timestamp ZonedDateTime required,
+  postingApi String,
+  isPosted Boolean,
+  postedBy String,
+  postedDate String,
+  tranFreeField1 String,
+  tranFreeField3 String,
+  tranFreeField4 String,
+  tranFreeField5 String,
+  tranFreeField5 String,
+  tranFreeField6 String
+  tranFreeField7 String,
+  tranFreeField8 String,
+  tranFreeField9 String,
+  tranFreeField10 String,
+  tranFreeField11 String,
+  tranFreeField12 String,
+  timestamp ZonedDateTime,
+  internalErrorCode String,
+  externalErrorCode String,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+}
+
+entity Banks
+{
+   recordId UUID  unique ,
+  bankName String required,
+  bankSwiftCode String required,
+  bankBranchId String,
+  bankPhoneNumber String,
+  bankEmail String,
+  createdAt ZonedDateTime required,
+  tranFreeField1 String,
+  tranFreeField3 String,
+  tranFreeField4 String,
+  tranFreeField5 String,
+  tranFreeField5 String,
+  tranFreeField6 String
+  delflg Boolean,
+  status RecordStatus
+}
+
+entity Branch {
+   recordId UUID  unique ,
+  bankId String ,
+  branchId String ,
+  branchName String required,
+  branchSwiftCode String required,
+  branchPhoneNumber String,
+  branchEmail String,
+  tranFreeField1 String,
+  tranFreeField3 String,
+  tranFreeField4 String,
+  tranFreeField5 String,
+  tranFreeField5 String,
+  tranFreeField6 String
+  timestamp ZonedDateTime,
+  status RecordStatus
+  updatedAt ZonedDateTime,
+  updatedBy String,
+}
+
+
+entity Address {
+   recordId UUID  unique ,
+  addressId String ,
+  phoneNumber String required,
+  email String required,
+  addressLine1 String,
+  addressLine2 String,
+  addressLine3 String,
+  addressLine4 String,
+  addressLine5 String,
+  addressLine6 String,
+  addressLine7 String,
+  timestamp ZonedDateTime required,
+
+}
+
+entity Biller {
+  Id  String,
+  billerName String,
+  billerCategory String,
+  addressId String,
+  narative String,
+  timestamp ZonedDateTime ,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  delflg Boolean,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+
+entity Partner {
+   recordId UUID  unique ,
+  partnerCode String ,
+  partnerName String required,
+  partnerDescription String,
+  partnerImage String,
+  addressId String,
+  partnerCategory PartnerCategory,
+  partnerStatus String,
+  recordStatus  RecordStatus,
+  createdAt ZonedDateTime required,
+  timestamp Instant ,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String
+  delflg Boolean,
+}
+
+enum PartnerCategory
+{
+
+  GOVERNMENT_ENTITY, SCHOOL,FINTECH,OTHER
+}
+entity BillerAccounts {
+  recordId UUID  unique ,  billerId String ,
+  billerGlAccNumber String required,
+  accDesc String,
+  timestamp ZonedDateTime ,
+  billerFreeField1 String,
+  billerFreeField2 String,
+  billerFreeField3 String,
+  billerFreeField4 String,
+  billerFreeField5 String,
+  billerFreeField6 String,
+  billerFreeField7 String,
+}
+
+entity ProductCategory {
+  recordId UUID  unique ,  ProductCategoryCode String required,
+  productCategoryName String required,
+  productCategoryDescription String,
+  productCategoryImage String,
+  productFreeField1 String,
+  productFreeField2 TextBlob,
+  productFreeField3 String,
+  productFreeField4 String,
+  productFreeField5 String,
+  delflg Boolean,
+}
+
+
+//==================================Requests=====================================
+
+/*
+validate customerAccount number or biller Id
+*/
+entity QueryCustomerDetails {
+  recordId UUID  unique ,
+  customerId String required, /*this is used to identify a customer, for example for umeme yaka, this will be then yaka Number, for Account Validation, this will be the account number*/
+  productCode String required,  /*this identfies the product, each product belongs to a biller for example UMEME has 3 product Codes, UMEME_YAKA, UMEME_POSTPAID, UMEME_NEWCONNECTION*/
+  partnerCode String required,  /*A number of absa partners are identified by there partnerCode for example AIRTELUG-MOBILEMONEY, UMEME */
+  timestamp ZonedDateTime,
+  billRequestRef String,
+  customerField1 String,
+  customerField2 String,
+  customerField3 String,
+  customerField4 String,
+  customerField5 String,
+  customerField6 String,
+  customerField7 String,
+  customerField8 String,
+  timestamp ZonedDateTime,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage,
+  responseCode String,
+  responseMessage String,
+  responseBody String,
+  timestamp ZonedDateTime ,
+  paymentType String,
+  requestRef String,
+  status TranStatus,
+  freeField1 String,
+  freeField2 String,
+
+}
+
+/*Make a bill payment by sending fields below*/
+entity BillPaymentRequest {
+  recordId UUID  unique ,
+  requestId String , /*this could be an auto incremented fields to to keep track if */
+  billRequestRef String,
+  customerId String required,
+  productCode String required,
+  billerCode String required,
+  channelId  String required,
+  requestDateTime ZonedDateTime required,
+  timestamp ZonedDateTime required,
+  customerField1 String,
+  customerField2 String,
+  customerField3 String,
+  customerField4 String,
+  customerField5 String,
+  customerField6 String,
+  customerField7 String,
+  customerField8 String,
+  customerField9 String,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage,
+  responseCode String,
+  responseMessage String,
+  responseBody String,
+  timestamp ZonedDateTime ,
+  requestRef String,
+  status TranStatus,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+
+}
+
+
+
+entity RequestInfo {
+  recordId UUID  unique ,
+  transactionId String,
+  requestData String,
+  paramList String,
+  timestamp ZonedDateTime ,
+  requestRef String,
+  status TranStatus,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String
+  time ZonedDateTime ,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage,
+
+}
+
+
+entity ResponseInfo {
+  recordId UUID  unique ,
+  responseCode String,
+  responseMessage String,
+  responseBody String,
+  timestamp ZonedDateTime ,
+  requestRef String,
+  status TranStatus,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String
+  time ZonedDateTime ,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+enum ServiceLevel {
+  N,
+  Y,
+  P,
+  X
+}
+
+entity TransactionSummary {
+  recordId UUID  unique ,  transactionId String ,
+  transactionType String required,
+  transactionAmount String required,
+  transactionDate ZonedDateTime ,
+  transactionStatus TranStatus,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  timestamp ZonedDateTime ,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage
+}
+
+entity TransactionStatus {
+   recordId UUID  unique ,
+  transactionId String,
+  transactionType String,
+  transactionAmount String,
+  transactionDate ZonedDateTime ,
+  transactionDateTime ZonedDateTime ,
+  fcrTransactionStatus String ,
+  transactionStatus TranStatus,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  timestamp ZonedDateTime ,
+  isPosted Boolean,
+  errorCode ERRORCODE,
+  errorMessage ErrorMessage,
+
+
+}
+
+entity TransactionHistory {
+
+  recordId UUID  unique ,  transferId String ,
+  productCode String required,
+  paymentChannelCode Channel required,
+  debitAccountNumber String required ,
+  creditAccountNumber String required,
+  debitAmount Integer required,
+  creditAmount Double required,
+  debitAmount Integer,
+  creditAmount Integer,
+  transactionAmount Integer
+  debitDate ZonedDateTime required,
+  creditDate ZonedDateTime required,
+  status TranStatus ,
+  settlementDate ZonedDateTime ,
+  debitCurrency Currency ,
+  timestamp ZonedDateTime required,
+  phoneNumber String required,
+  email String required,
+  payerName String,
+  payerAddress String,
+  payerEmail String,
+  payerPhoneNumber String,
+  payerNarration String,
+  payerBranchId String,
+  beneficiaryName String,
+  beneficiaryAccount String,
+  beneficiaryBranchId String,
+  beneficiaryPhoneNumber String,
+  tranStatus TranStatus ,
+  narration1 String,
+  narration2 String,
+  narration3 String,
+  modeOfPayment ModeOfPayment,
+  retries Integer,
+  posted Boolean,
+  apiId String,
+  apiVersion String,
+  timestamp ZonedDateTime required,
+  postingApi String,
+  isPosted Boolean,
+  postedBy String,
+  postedDate String,
+  internalErrorCode String,
+  externalErrorCode String,
+  tranFreeField1 String,
+  tranFreeField3 String,
+  tranFreeField4 String,
+  tranFreeField5 String,
+  tranFreeField5 String,
+  tranFreeField6 String
+  tranFreeField7 String,
+  tranFreeField8 String,
+  tranFreeField9 String,
+  tranFreeField10 String,
+  tranFreeField11 String,
+  tranFreeField12 String
+}
+
+entity Apps {
+  recordId UUID  unique ,
+  configId String ,
+  appId String required,
+  appCurrentVersion String required,
+  appName String required,
+  appDescription String,
+  appStatus String,
+  freeField1 TextBlob,
+  freeField2 TextBlob,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  delflg Boolean,
+  timestamp ZonedDateTime,
+  createdAt ZonedDateTime,
+  createdBy String,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+entity PaymentConfig{
+  recordId UUID  unique ,
+  paymentId String ,
+  paymentName String required,
+  paymentType String required,
+  paymentDescription String,
+  paymentStatus String,
+  paymentMethod ModeOfPayment ,
+  paymentAmount Double,
+  additionalConfig TextBlob,
+  freeField1 TextBlob,
+  freeField2 TextBlob,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+}
+
+
+
+entity IncomingJSONRequest {
+  recordId UUID  unique ,  transactionId String ,
+  fromEndpoint String,
+  toEndpoint String,
+  requestJson TextBlob required,
+  requestType String required,
+  requestDescription String,
+  requestStatus String,
+  additionalInfo TextBlob,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  timestamp ZonedDateTime required,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+entity OutgoingJSONResponse {
+  recordId UUID  unique ,  responseId String ,
+  transactionId String,
+  responseJson TextBlob required,
+  responseType String required,
+  responseDescription String,
+  toEndpoint String,
+  fromEndpoint String,
+  responseStatus String,
+  additionalInfo TextBlob,
+  timestamp ZonedDateTime required,
+  exceptionMessage TextBlob,
+  freeField String,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+}
+
+entity IncomingJSONResponse {
+  recordId UUID  unique ,  responseId String ,
+  transactionId String,
+  responseJson TextBlob required,
+  responseType String required,
+  responseDescription String,
+  responseStatus String,
+  additionalInfo TextBlob,
+  timestamp ZonedDateTime required,
+  exceptionMessage TextBlob,
+  freeField String,
+  freeField1 String,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+}
+
+
+
+enum ModeOfPayment {
+  CASH,TRANSFER
+}
+
+
+enum Channel {
+  ATM,CDM,POS,INTERNET_BANKING,MOBILE_BANKING
+}
+
+enum TranStatus
+{
+  PENDING, SUCCESS, FAILED, UNKNOWN
+}
+
+enum RecordStatus {
+  ACTIVE(active), INACTIVE(inactive), PENDING(pending),INITIATED(initiated),APPROVED(approved)
+}
+
+enum Currency{
+  UGX(ugx),
+  USD(usd),
+  EUR(eur),
+  GBP(gbp),
+  AUD(aud),
+  CNY(cny),
+  JPY(jpy),
+  CHF(chf),
+  CZK(czk),
+  AUD(aud)
+}
+
+entity Currency{
+  recordId UUID  unique ,
+  currencyUniqueId String ,
+  currencyCode String,
+  currencyName String,
+  freeField1 TextBlob,
+  freeField2 String,
+  freeField3 String,
+  freeField4 String,
+  freeField5 String,
+  freeField6 String,
+  timestamp ZonedDateTime required,
+  recordStatus RecordStatus,
+  updatedAt ZonedDateTime,
+  updatedBy String,
+
+}
+
+entity Devices
+{
+  recordId UUID  unique ,
+  deviceId String ,
+  deviceName String required,
+  deviceType String required,
+  deviceDescription String,
+  timestamp ZonedDateTime required,
+  delflg Boolean,
+  recordStatus RecordStatus,
+
+}
+
+enum ERRORCODE {
+  SUCCESS("00"), FAILED("101"),
+  PENDING("01"),UNKNOWN("99") ,
+  INVALID_ACCOUNT("105"),
+  INVALID_BILLER_CODE("106"),
+  INVALID_INVALID_AMOUNT("107"),
+  INVALID_PAYMENT_TYPE("108"),
+  INVALID_PAYMENT_METHOD("109"),
+  INVALID_DEVICE_ID("110")
+}
+
+
+enum ErrorMessage{
+
+  TRANSACTION_SUCCESS("(Transaction suceessfully processed"),
+  TRANSACTION_FAILED("Transaction failed "),
+  TRANSACTION_PENDING("Transaction pending "),
+  TRANSACTION_INITIATED("Transaction initiated "),
+  TRANSACTION_APPROVED("Transaction approved "),
+  TRANSACTION_UNKNOWN("Transaction unknown !"),
+  TRANSACTION_INVALID_ACCOUNT("Invalid account !"),
+  TRANSACTION_INVALID_BILLER_CODE("Invalid biller code !"),
+  TRANSACTION_INVALID_INVALID_AMOUNT("Invalid invalid amount !"),
+  TRANSACTION_INVALID_PAYMENT_TYPE("Invalid payment type !"),
+  TRANSACTION_INVALID_PAYMENT_METHOD("Invalid payment method !"),
+  TRANSACTION_INVALID_DEVICE_ID("Invalid device id !"),
+  TRANSACTION_UNKNOWN_ERROR("Unknown error")
+
+}
+
+
+
+
+enum TransferType
+{
+  EFT, RTGS, FT, IT
+}
+
+
+
