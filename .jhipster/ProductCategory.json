@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "entityTableName": "product_category",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "productCategoryCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "productCategoryName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "productCategoryDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productCategoryImage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productFreeField2",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "productFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delflg",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "ProductCategory",
+  "relationships": []
+}

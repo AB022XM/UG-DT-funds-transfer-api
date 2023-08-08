@@ -1,0 +1,76 @@
+{
+  "applications": "*",
+  "entityTableName": "branch",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "bankId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "branchSwiftCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "branchPhoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RecordStatus",
+      "fieldValues": "ACTIVE (active),INACTIVE (inactive),PENDING (pending),INITIATED (initiated),APPROVED (approved)"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Branch",
+  "relationships": []
+}

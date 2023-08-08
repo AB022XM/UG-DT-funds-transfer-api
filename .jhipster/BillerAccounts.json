@@ -1,0 +1,58 @@
+{
+  "applications": "*",
+  "entityTableName": "biller_accounts",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "billerId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerGlAccNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "billerFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billerFreeField7",
+      "fieldType": "String"
+    }
+  ],
+  "name": "BillerAccounts",
+  "relationships": []
+}

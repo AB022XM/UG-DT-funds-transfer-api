@@ -1,0 +1,146 @@
+{
+  "applications": "*",
+  "entityTableName": "customer_account",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "requestId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "accountName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "returnCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "returnMessage",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "externalTXNid",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "transactionDate",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customerProduct",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customerType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountCategory",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "channel",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "franFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField8",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField9",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField10",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField11",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField12",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField13",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField14",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CustomerAccount",
+  "relationships": []
+}

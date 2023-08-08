@@ -1,0 +1,162 @@
+{
+  "applications": "*",
+  "entityTableName": "transaction",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "transferId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "billerId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentChannelCode",
+      "fieldType": "Channel",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ATM,CDM,POS,INTERNET_BANKING,MOBILE_BANKING"
+    },
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tranDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "creditAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "debitAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranStatus",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "tranStatusDetails",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retries",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "postedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postedDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "internalErrorCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalErrorCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField8",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField9",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField10",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField11",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "franFreeField12",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Transaction",
+  "relationships": []
+}

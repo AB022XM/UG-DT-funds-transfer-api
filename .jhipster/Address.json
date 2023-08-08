@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "entityTableName": "address",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "addressId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "addressLine1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Address",
+  "relationships": []
+}

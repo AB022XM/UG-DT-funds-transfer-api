@@ -1,0 +1,94 @@
+{
+  "applications": "*",
+  "entityTableName": "transfer",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "transferId",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "transferType",
+      "fieldType": "TransferType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "EFT,RTGS,FT,IT"
+    },
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tranDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "beneficiaryAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranStatus",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "tranStatusDetails",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retries",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "postedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postedDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField3",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Transfer",
+  "relationships": []
+}
