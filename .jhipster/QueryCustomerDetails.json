@@ -1,0 +1,111 @@
+{
+  "applications": "*",
+  "entityTableName": "query_customer_details",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "productCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "partnerCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "billRequestRef",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerField8",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorCode",
+      "fieldType": "ERRORCODE",
+      "fieldValues": "SUCCESS (00),FAILED (101),PENDING (01),UNKNOWN (99),INVALID_ACCOUNT (105),INVALID_BILLER_CODE (106),INVALID_INVALID_AMOUNT (107),INVALID_PAYMENT_TYPE (108),INVALID_PAYMENT_METHOD (109),INVALID_DEVICE_ID (110)"
+    },
+    {
+      "fieldName": "errorMessage",
+      "fieldType": "ErrorMessage",
+      "fieldValues": "TRANSACTION_SUCCESS ((Transaction suceessfully processed),TRANSACTION_FAILED (Transaction failed ),TRANSACTION_PENDING (Transaction pending ),TRANSACTION_INITIATED (Transaction initiated ),TRANSACTION_APPROVED (Transaction approved ),TRANSACTION_UNKNOWN (Transaction unknown !),TRANSACTION_INVALID_ACCOUNT (Invalid account !),TRANSACTION_INVALID_BILLER_CODE (Invalid biller code !),TRANSACTION_INVALID_INVALID_AMOUNT (Invalid invalid amount !),TRANSACTION_INVALID_PAYMENT_TYPE (Invalid payment type !),TRANSACTION_INVALID_PAYMENT_METHOD (Invalid payment method !),TRANSACTION_INVALID_DEVICE_ID (Invalid device id !),TRANSACTION_UNKNOWN_ERROR (Unknown error)"
+    },
+    {
+      "fieldName": "responseCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseBody",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestRef",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    }
+  ],
+  "name": "QueryCustomerDetails",
+  "relationships": []
+}

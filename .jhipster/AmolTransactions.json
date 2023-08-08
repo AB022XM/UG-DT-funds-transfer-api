@@ -1,0 +1,310 @@
+{
+  "applications": "*",
+  "entityTableName": "amol_transactions",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "externalTxnId",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "customerReference",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "debitAccountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creditAccountNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "debitAmount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creditAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "transactionAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "debitDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "creditDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "settlementDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "debitCurrency",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "payerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerPhoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerNarration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBranchId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "beneficiaryName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "beneficiaryAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "beneficiaryBranchId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "beneficiaryphoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranStatus",
+      "fieldType": "TranStatus",
+      "fieldValues": "PENDING,SUCCESS,FAILED,UNKNOWN"
+    },
+    {
+      "fieldName": "narration1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "narration2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "narration3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "taxGLAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxNarration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "internalErrorCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalErrorCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeBranchId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductInstanceReference",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductUnitOfMeasure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payeeProductQuantity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subCategoryCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankCity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankState",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankCountry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payerBankPostalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "checkerId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remittanceInformation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentChannelCode",
+      "fieldType": "Channel",
+      "fieldValues": "ATM,CDM,POS,INTERNET_BANKING,MOBILE_BANKING"
+    },
+    {
+      "fieldName": "feeAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "feeGLAccount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "feeNarration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tranFreeField7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseDetails",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "transferId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transferReferenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transferStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseDateTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "name": "AmolTransactions",
+  "relationships": []
+}

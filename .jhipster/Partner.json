@@ -1,0 +1,81 @@
+{
+  "applications": "*",
+  "entityTableName": "partner",
+  "fields": [
+    {
+      "fieldName": "recordId",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "partnerCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partnerName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "partnerDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partnerImage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partnerCategory",
+      "fieldType": "PartnerCategory",
+      "fieldValues": "GOVERNMENT_ENTITY,SCHOOL,FINTECH,OTHER"
+    },
+    {
+      "fieldName": "partnerStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordStatus",
+      "fieldType": "RecordStatus",
+      "fieldValues": "ACTIVE (active),INACTIVE (inactive),PENDING (pending),INITIATED (initiated),APPROVED (approved)"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delflg",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Partner",
+  "relationships": []
+}
